@@ -30,7 +30,7 @@ export default function Home() {
     <div className="flex flex-row h-screen max-md:p-3">
       <BlankDiv />
       <div className="w-full">
-        <div className="flex flex-col justify-center items-center gap-4 h-screen">
+        <div className="flex flex-col justify-center items-center gap-4 h-full">
           <div className="flex flex-col gap-2">
             <div className="flex flex-row justify-center">
               <Avatar
