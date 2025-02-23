@@ -17,8 +17,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`m-0 p-0 text-justify box-border ${inter.className}`}>
+    <html lang="en" data-theme="dark">
+      <body className={`m-0 p-0 text-justify box-border ${inter.className} dark:bg-black`}>
         {children}
       </body>
     </html>

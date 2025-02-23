@@ -1,9 +1,8 @@
 import Avatar from "@/component/Avatar";
 import BlankDiv from "@/component/BlankDiv";
+import DarkMode from "@/component/DarkMode";
 import SocialLink from "@/component/SocialLink";
-import { FaFacebook } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTwitter, FaSun } from "react-icons/fa";
 
 export default function Home() {
   const links: Array<
@@ -17,42 +16,45 @@ export default function Home() {
     {
       icon: <FaInstagram size={30} />,
       name: "Instagram",
-      url: "https://instagram.com/thinh26"
+      url: "https://instagram.com/thinh26",
     },
     {
       icon: <FaTwitter size={30} />,
       name: "X",
-      url: "https://x.com/thinh26"
-    }
+      url: "https://x.com/thinh26",
+    },
   ];
 
   return (
-    <div className="flex flex-row h-dvh max-md:p-3">
-      <BlankDiv />
-      <div className="w-full">
-        <div className="flex flex-col justify-center items-center gap-4 h-full">
-          <div className="flex flex-col gap-2">
-            <div className="flex flex-row justify-center">
-              <Avatar
-                className="rounded-full"
-                src="/assets/png/500x500bb.png"
-                alt="myAvatar"
-                width={80}
-                height={80}
-              />
+    <>
+      <DarkMode />
+      <div className="flex flex-row h-dvh max-md:p-3">
+        <BlankDiv />
+        <div className="w-full">
+          <div className="flex flex-col justify-center items-center gap-4 h-full">
+            <div className="flex flex-col gap-2">
+              <div className="flex flex-row justify-center">
+                <Avatar
+                  className="rounded-full"
+                  src="/assets/png/500x500bb.png"
+                  alt="myAvatar"
+                  width={80}
+                  height={80}
+                />
+              </div>
+              <div className="font-bold text-center text-xl dark:text-white">
+                Nguyễn Đức Thịnh
+              </div>
             </div>
-            <div className="font-bold text-center text-xl">
-              Nguyễn Đức Thịnh
+            <div className="w-full flex flex-col gap-3">
+              {links.map(({ icon, name, url }) => (
+                <SocialLink key={name} icon={icon} name={name} url={url} />
+              ))}
             </div>
-          </div>
-          <div className="w-full flex flex-col gap-3">
-            {links.map(({ icon, name, url }) => (
-              <SocialLink key={name} icon={icon} name={name} url={url} />
-            ))}
           </div>
         </div>
+        <BlankDiv />
       </div>
-      <BlankDiv />
-    </div>
+    </>
   );
 }
