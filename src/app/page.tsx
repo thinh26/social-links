@@ -1,8 +1,7 @@
 import Avatar from "@/component/Avatar";
 import BlankDiv from "@/component/BlankDiv";
-import DarkMode from "@/component/DarkMode";
 import SocialLink from "@/component/SocialLink";
-import { FaFacebook, FaInstagram, FaTwitter, FaSun } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 export default function Home() {
   const links: Array<
