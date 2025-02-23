@@ -1,9 +1,7 @@
 import Avatar from "@/component/Avatar";
 import BlankDiv from "@/component/BlankDiv";
 import SocialLink from "@/component/SocialLink";
-import { FaFacebook } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 export default function Home() {
   const links: Array<
@@ -17,13 +15,13 @@ export default function Home() {
     {
       icon: <FaInstagram size={30} />,
       name: "Instagram",
-      url: "https://instagram.com/thinh26"
+      url: "https://instagram.com/thinh26",
     },
     {
       icon: <FaTwitter size={30} />,
       name: "X",
-      url: "https://x.com/thinh26"
-    }
+      url: "https://x.com/thinh26",
+    },
   ];
 
   return (
@@ -41,7 +39,7 @@ export default function Home() {
                 height={80}
               />
             </div>
-            <div className="font-bold text-center text-xl">
+            <div className="font-bold text-center text-xl dark:text-white">
               Nguyễn Đức Thịnh
             </div>
           </div>
