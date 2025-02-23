@@ -26,35 +26,32 @@ export default function Home() {
   ];
 
   return (
-    <>
-      <DarkMode />
-      <div className="flex flex-row h-dvh max-md:p-3">
-        <BlankDiv />
-        <div className="w-full">
-          <div className="flex flex-col justify-center items-center gap-4 h-full">
-            <div className="flex flex-col gap-2">
-              <div className="flex flex-row justify-center">
-                <Avatar
-                  className="rounded-full"
-                  src="/assets/png/500x500bb.png"
-                  alt="myAvatar"
-                  width={80}
-                  height={80}
-                />
-              </div>
-              <div className="font-bold text-center text-xl dark:text-white">
-                Nguyễn Đức Thịnh
-              </div>
+    <div className="flex flex-row h-dvh max-md:p-3">
+      <BlankDiv />
+      <div className="w-full">
+        <div className="flex flex-col justify-center items-center gap-4 h-full">
+          <div className="flex flex-col gap-2">
+            <div className="flex flex-row justify-center">
+              <Avatar
+                className="rounded-full"
+                src="/assets/png/500x500bb.png"
+                alt="myAvatar"
+                width={80}
+                height={80}
+              />
             </div>
-            <div className="w-full flex flex-col gap-3">
-              {links.map(({ icon, name, url }) => (
-                <SocialLink key={name} icon={icon} name={name} url={url} />
-              ))}
+            <div className="font-bold text-center text-xl dark:text-white">
+              Nguyễn Đức Thịnh
             </div>
           </div>
+          <div className="w-full flex flex-col gap-3">
+            {links.map(({ icon, name, url }) => (
+              <SocialLink key={name} icon={icon} name={name} url={url} />
+            ))}
+          </div>
         </div>
-        <BlankDiv />
       </div>
-    </>
+      <BlankDiv />
+    </div>
   );
 }
