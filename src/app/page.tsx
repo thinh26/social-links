@@ -27,7 +27,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex flex-row h-screen max-md:p-3">
+    <div className="flex flex-row h-dvh max-md:p-3">
       <BlankDiv />
       <div className="w-full">
         <div className="flex flex-col justify-center items-center gap-4 h-full">
