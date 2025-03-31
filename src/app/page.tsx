@@ -1,24 +1,35 @@
 import Avatar from "@/component/Avatar";
 import BlankDiv from "@/component/BlankDiv";
 import SocialLink from "@/component/SocialLink";
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { Facebook } from "@/component/SVG";
+import { XformerlyTwitter } from "@/component/SVG/X";
+import Image from "next/image";
 
 export default function Home() {
   const links: Array<
     Partial<{ icon: React.ReactNode; name: string; url: string }>
   > = [
     {
-      icon: <FaFacebook size={30} />,
+      icon: <Facebook width={30} height={30} />,
       name: "Facebook",
       url: "https://facebook.com/Th1nh26",
     },
     {
-      icon: <FaInstagram size={30} />,
+      // icon: <FaInstagram size={30} />,
+      icon: (
+        <Image
+          src="/assets/Instagram_logo_2022.svg"
+          alt="Instagram Logo"
+          width={30}
+          height={30}
+          loading="eager"
+        />
+      ),
       name: "Instagram",
       url: "https://instagram.com/thinh26",
     },
     {
-      icon: <FaTwitter size={30} />,
+      icon: <XformerlyTwitter width={26} height={26} />,
       name: "X",
       url: "https://x.com/thinh26",
     },

@@ -19,6 +19,7 @@ function Avatar({ src, alt, width, height, className }: AvatarProps) {
       alt={alt}
       width={width}
       height={height}
+      data-testid='avatar'
     />
   );
 }
