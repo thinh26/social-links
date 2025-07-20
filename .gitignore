@@ -44,9 +44,4 @@ next-env.d.ts
 .vscode/*
 !.vscode/extensions.json
 
-# lock file
-package-lock.json
-./package-lock.json
-package-lock.*
-./package-lock.*
 /.idea/

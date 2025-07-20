@@ -12,7 +12,11 @@ export default function UiHeader(): React.ReactNode {
   return (
     <Grid container className="mb-4">
       <Grid size={4}>
-        <_Avatar alt="Avatar" src={Avatar.src} />
+        <_Avatar alt="Avatar" src={Avatar.src} slotProps={{
+            root: {
+                "aria-label": "Avatar",
+            }
+        }} />
       </Grid>
       <Grid size={8} className="p-3">
         <Stack
@@ -22,15 +26,15 @@ export default function UiHeader(): React.ReactNode {
           className="h-full"
           sx={{ gap: "5px" }}
         >
-          <_Fullname>Nguyễn Đức Thịnh</_Fullname>
-          <_Subinfo>@thinh26</_Subinfo>
+          <_Fullname aria-label="fullname">Nguyễn Đức Thịnh</_Fullname>
+          <_Subinfo aria-label="username">@thinh26</_Subinfo>
           <Stack direction="row" alignItems="center">
-            <LocationOnIcon sx={{ color: "gray", fontSize: "15px" }} />
-            <_Subinfo>Nha Trang, Khánh Hòa, Việt Nam</_Subinfo>
+            <LocationOnIcon sx={{ color: "gray", fontSize: "15px" }} aria-label="locationIcon" />
+            <_Subinfo aria-label="hometown">Nha Trang, Khánh Hòa, Việt Nam</_Subinfo>
           </Stack>
           <Stack direction="row" gap={1}>
             {Chips.map((label) => (
-              <_Chip key={label} label={label} />
+              <_Chip key={label} label={label} aria-label={label}/>
             ))}
           </Stack>
         </Stack>
