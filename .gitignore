@@ -50,3 +50,4 @@ package-lock.json
 package-lock.*
 ./package-lock.*
 /.idea/
+/public/sw_prod.js
