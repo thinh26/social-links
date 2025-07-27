@@ -6,6 +6,7 @@ import "./globals.css";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "@/theme";
 import React from "react";
+import ServiceWorker from "@/components/ServiceWorker";
 
 const notoSans = Noto_Sans({
   subsets: ["latin"],
@@ -26,7 +27,9 @@ export default function RootLayout({
     <html lang="en" className={notoSans.variable}>
       <body className="bg-black max-w-[412px] mx-auto overflow-auto">
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
-          <ThemeProvider theme={theme}>{children}</ThemeProvider>
+          <ThemeProvider theme={theme}>
+            <ServiceWorker>{children}</ServiceWorker>
+          </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
     </html>
